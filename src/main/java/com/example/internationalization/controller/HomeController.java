@@ -18,7 +18,8 @@ public class HomeController {
     @GetMapping
     public String home(Locale locale, Model model) {
         model.addAttribute("title", messageSource.getMessage("title", null, locale));
-        model.addAttribute("message", messageSource.getMessage("message", null, locale));
+        model.addAttribute("hello", messageSource.getMessage("hello", null, locale));
+        model.addAttribute("welcomeMessage", messageSource.getMessage("welcome.message", null, locale));
         return "home";
 
     }
